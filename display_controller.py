@@ -284,7 +284,7 @@ class DisplayController:  # pylint: disable=too-many-instance-attributes
             self.thumb_image = resize_image(image, self.THUMB_W)
             self.label_albumart_detail.place(relx=0.5, y=self.THUMB_H / 2, anchor=tk.CENTER)
 
-        self.label_track.place(relx=0.5, y=self.THUMB_H, anchor=tk.N)
+        self.label_track.place(relx=0.5, y=self.SCREEN_INNER_H, anchor=tk.N)
 
         if detail_text == "" or not self.show_artist_and_album:
             self.label_detail.destroy()
@@ -299,7 +299,7 @@ class DisplayController:  # pylint: disable=too-many-instance-attributes
                     wraplength=600,
                     justify="center",
                 )
-            self.label_detail.place(relx=0.5, y=self.THUMB_H, anchor=tk.S)
+            self.label_detail.place(relx=0.5, y=self.SCREEN_INNER_H, anchor=tk.S)
             self.label_detail.configure(font=self.detail_font)
 
         if not self.show_play_state:
