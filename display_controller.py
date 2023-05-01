@@ -19,8 +19,10 @@ class DisplayController:  # pylint: disable=too-many-instance-attributes
     def __init__(self, loop, show_details, show_artist_and_album, show_details_timeout, overlay_text, show_play_state, show_spotify_code):
         """Initialize the display controller."""
 
-        self.SCREEN_W = 700
-        self.SCREEN_H = 700
+        self.SCREEN_W = 720
+        self.SCREEN_H = 720
+        self.SCREEN_INNER_W = 680
+        self.SCREEN_INNER_H = 680
         self.THUMB_W = 0
         self.THUMB_H = 0
 
@@ -274,9 +276,9 @@ class DisplayController:  # pylint: disable=too-many-instance-attributes
                 self.THUMB_W = self.THUMB_W + 40
 
         # Store the images as attributes to preserve scope for Tk
-        self.album_image = resize_image(image, self.SCREEN_W)
+        self.album_image = resize_image(image, self.SCREEN_INNER_W)
         if self.overlay_text:
-            self.thumb_image = resize_image(image, self.SCREEN_W)
+            self.thumb_image = resize_image(image, self.SCREEN_INNER_W)
             self.label_albumart_detail.place(relx=0.5, rely=0.5, anchor=tk.CENTER)
         else:
             self.thumb_image = resize_image(image, self.THUMB_W)
