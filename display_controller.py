@@ -19,8 +19,8 @@ class DisplayController:  # pylint: disable=too-many-instance-attributes
     def __init__(self, loop, show_details, show_artist_and_album, show_details_timeout, overlay_text, show_play_state, show_spotify_code):
         """Initialize the display controller."""
 
-        self.SCREEN_W = 720
-        self.SCREEN_H = 720
+        self.SCREEN_W = 700
+        self.SCREEN_H = 700
         self.THUMB_W = 0
         self.THUMB_H = 0
 
