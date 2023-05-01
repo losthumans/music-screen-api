@@ -21,8 +21,8 @@ class DisplayController:  # pylint: disable=too-many-instance-attributes
 
         self.SCREEN_W = 720
         self.SCREEN_H = 720
-        self.SCREEN_INNER_W = 680
-        self.SCREEN_INNER_H = 680
+        self.SCREEN_INNER_W = 670
+        self.SCREEN_INNER_H = 670
         self.THUMB_W = 0
         self.THUMB_H = 0
 
@@ -94,7 +94,7 @@ class DisplayController:  # pylint: disable=too-many-instance-attributes
             fg="white",
             bg="black",
         )
-        self.label_albumart.place(relx=0.5, rely=0.5, anchor=tk.CENTER)
+        self.label_albumart.place(x=25, y=15, anchor=tk.CENTER)
 
         self.label_albumart_detail = tk.Label(
             self.detail_frame,
@@ -299,7 +299,7 @@ class DisplayController:  # pylint: disable=too-many-instance-attributes
                     wraplength=600,
                     justify="center",
                 )
-            self.label_detail.place(relx=0.5, y=self.SCREEN_H - 10, anchor=tk.S)
+            self.label_detail.place(relx=0.5, y=self.SCREEN_INNER_H - 10, anchor=tk.S)
             self.label_detail.configure(font=self.detail_font)
 
         if not self.show_play_state:
